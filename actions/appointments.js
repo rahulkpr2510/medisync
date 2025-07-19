@@ -77,28 +77,28 @@ export async function bookAppointment(formData) {
           {
             // New appointment starts during an existing appointment
             startTime: {
-              lte: startTime,
+              lte: startTime.toISOString(),
             },
             endTime: {
-              gt: startTime,
+              gt: startTime.toISOString(),
             },
           },
           {
             // New appointment ends during an existing appointment
             startTime: {
-              lt: endTime,
+              lt: endTime.toISOString(),
             },
             endTime: {
-              gte: endTime,
+              gte: endTime.toISOString(),
             },
           },
           {
             // New appointment completely overlaps an existing appointment
             startTime: {
-              gte: startTime,
+              gte: startTime.toISOString(),
             },
             endTime: {
-              lte: endTime,
+              lte: endTime.toISOString(),
             },
           },
         ],
@@ -127,7 +127,8 @@ export async function bookAppointment(formData) {
       data: {
         patientId: patient.id,
         doctorId: doctor.id,
-        startTime,
+        startTime: startTime.toISOString(),
+        endTime: endTime.toISOString(),
         endTime,
         patientDescription,
         status: "SCHEDULED",
