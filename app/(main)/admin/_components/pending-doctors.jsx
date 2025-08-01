@@ -105,7 +105,7 @@ export function PendingDoctors({ doctors }) {
                       <div className="flex items-center gap-2 self-end md:self-auto">
                         <Badge
                           variant="outline"
-                          className="bg-amber-900/20 border-amber-900/30 text-amber-400"
+                          className="bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                         >
                           Pending
                         </Badge>
@@ -242,7 +242,7 @@ export function PendingDoctors({ doctors }) {
                   handleUpdateStatus(selectedDoctor.id, "REJECTED")
                 }
                 disabled={loading}
-                className="bg-red-600 hover:bg-red-700"
+                className="bg-emerald-600 hover:bg-emerald-700"
               >
                 <X className="mr-2 h-4 w-4" />
                 Reject

@@ -196,7 +196,7 @@ export function AppointmentCard({
 
   useEffect(() => {
     if (tokenData?.success) {
-      // Redirect to video call page with token and session ID
+      // redirect to video call page with token and session ID
       router.push(
         `/video-call?sessionId=${tokenData.videoSessionId}&token=${tokenData.token}&appointmentId=${appointment.id}`
       );
@@ -271,8 +271,8 @@ export function AppointmentCard({
                   appointment.status === "COMPLETED"
                     ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                     : appointment.status === "CANCELLED"
-                    ? "bg-red-900/20 border-red-900/30 text-red-400"
-                    : "bg-amber-900/20 border-amber-900/30 text-amber-400"
+                    ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
+                    : "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                 }
               >
                 {appointment.status}
@@ -386,8 +386,8 @@ export function AppointmentCard({
                   appointment.status === "COMPLETED"
                     ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                     : appointment.status === "CANCELLED"
-                    ? "bg-red-900/20 border-red-900/30 text-red-400"
-                    : "bg-amber-900/20 border-amber-900/30 text-amber-400"
+                    ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
+                    : "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                 }
               >
                 {appointment.status}
@@ -545,7 +545,7 @@ export function AppointmentCard({
                   variant="outline"
                   onClick={handleCancelAppointment}
                   disabled={cancelLoading}
-                  className="border-red-900/30 text-red-400 hover:bg-red-900/10 mt-3 sm:mt-0"
+                  className="border-emerald-900/30 text-emerald-400 hover:bg-emerald-900/10 mt-3 sm:mt-0"
                 >
                   {cancelLoading ? (
                     <>

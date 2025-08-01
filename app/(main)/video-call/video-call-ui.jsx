@@ -278,7 +278,7 @@ export default function VideoCall({ sessionId, token }) {
                 className={`rounded-full p-4 h-14 w-14 ${
                   isVideoEnabled
                     ? "border-emerald-900/30"
-                    : "bg-red-900/20 border-red-900/30 text-red-400"
+                    : "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                 }`}
                 disabled={!publisherRef.current}
               >
@@ -292,7 +292,7 @@ export default function VideoCall({ sessionId, token }) {
                 className={`rounded-full p-4 h-14 w-14 ${
                   isAudioEnabled
                     ? "border-emerald-900/30"
-                    : "bg-red-900/20 border-red-900/30 text-red-400"
+                    : "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                 }`}
                 disabled={!publisherRef.current}
               >
@@ -303,7 +303,7 @@ export default function VideoCall({ sessionId, token }) {
                 variant="destructive"
                 size="lg"
                 onClick={endCall}
-                className="rounded-full p-4 h-14 w-14 bg-red-600 hover:bg-red-700"
+                className="rounded-full p-4 h-14 w-14 bg-emerald-600 hover:bg-emerald-700"
               >
                 <PhoneOff />
               </Button>

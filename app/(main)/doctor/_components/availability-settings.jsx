@@ -168,7 +168,7 @@ export function AvailabilitySettings({ slots }) {
                   className="bg-background border-emerald-900/20"
                 />
                 {errors.startTime && (
-                  <p className="text-sm font-medium text-red-500">
+                  <p className="text-sm font-medium text-emerald-500">
                     {errors.startTime.message}
                   </p>
                 )}
@@ -183,7 +183,7 @@ export function AvailabilitySettings({ slots }) {
                   className="bg-background border-emerald-900/20"
                 />
                 {errors.endTime && (
-                  <p className="text-sm font-medium text-red-500">
+                  <p className="text-sm font-medium text-emerald-500">
                     {errors.endTime.message}
                   </p>
                 )}

@@ -185,7 +185,7 @@ export default function OnboardingPage() {
                 </SelectContent>
               </Select>
               {errors.speciality && (
-                <p className="text-sm font-medium text-red-500 mt-1">
+                <p className="text-sm font-medium text-emerald-500 mt-1">
                   {errors.speciality.message}
                 </p>
               )}
@@ -200,7 +200,7 @@ export default function OnboardingPage() {
                 {...register("experience", { valueAsNumber: true })}
               />
               {errors.experience && (
-                <p className="text-sm font-medium text-red-500 mt-1">
+                <p className="text-sm font-medium text-emerald-500 mt-1">
                   {errors.experience.message}
                 </p>
               )}
@@ -215,7 +215,7 @@ export default function OnboardingPage() {
                 {...register("credentialUrl")}
               />
               {errors.credentialUrl && (
-                <p className="text-sm font-medium text-red-500 mt-1">
+                <p className="text-sm font-medium text-emerald-500 mt-1">
                   {errors.credentialUrl.message}
                 </p>
               )}
@@ -233,7 +233,7 @@ export default function OnboardingPage() {
                 {...register("description")}
               />
               {errors.description && (
-                <p className="text-sm font-medium text-red-500 mt-1">
+                <p className="text-sm font-medium text-emerald-500 mt-1">
                   {errors.description.message}
                 </p>
               )}

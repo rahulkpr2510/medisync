@@ -138,7 +138,7 @@ export function PendingPayouts({ payouts }) {
                       <div className="flex flex-col sm:flex-row gap-2 self-end lg:self-center">
                         <Badge
                           variant="outline"
-                          className="bg-amber-900/20 border-amber-900/30 text-amber-400 w-fit"
+                          className="bg-emerald-900/20 border-emerald-900/30 text-emerald-400 w-fit"
                         >
                           Pending
                         </Badge>

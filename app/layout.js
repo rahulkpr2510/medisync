@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "MediSync - Doctors Appointment App",
+  title: "MediSync - Doctor Appointment App",
   description: "Connect with doctors anytime, anywhere",
 };
 

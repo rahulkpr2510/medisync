@@ -34,7 +34,7 @@ export default async function PatientAppointmentsPage() {
         <CardContent>
           {error ? (
             <div className="text-center py-8">
-              <p className="text-red-400">Error: {error}</p>
+              <p className="text-emerald-400">Error: {error}</p>
             </div>
           ) : appointments?.length > 0 ? (
             <div className="space-y-4">

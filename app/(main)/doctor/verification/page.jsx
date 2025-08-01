@@ -29,13 +29,13 @@ export default async function VerificationPage() {
           <CardHeader className="text-center">
             <div
               className={`mx-auto p-4 ${
-                isRejected ? "bg-red-900/20" : "bg-amber-900/20"
+                isRejected ? "bg-emerald-900/20" : "bg-emerald-900/20"
               } rounded-full mb-4 w-fit`}
             >
               {isRejected ? (
-                <XCircle className="h-8 w-8 text-red-400" />
+                <XCircle className="h-8 w-8 text-emerald-400" />
               ) : (
-                <ClipboardCheck className="h-8 w-8 text-amber-400" />
+                <ClipboardCheck className="h-8 w-8 text-emerald-400" />
               )}
             </div>
             <CardTitle className="text-2xl font-bold text-white">
@@ -51,8 +51,8 @@ export default async function VerificationPage() {
           </CardHeader>
           <CardContent className="text-center">
             {isRejected ? (
-              <div className="bg-red-900/10 border border-red-900/20 rounded-lg p-4 mb-6 flex items-start">
-                <AlertCircle className="h-5 w-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+              <div className="bg-emerald-900/10 border border-emerald-900/20 rounded-lg p-4 mb-6 flex items-start">
+                <AlertCircle className="h-5 w-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
                 <div className="text-muted-foreground text-left">
                   <p className="mb-2">
                     Our administrative team has reviewed your application and
@@ -71,8 +71,8 @@ export default async function VerificationPage() {
                 </div>
               </div>
             ) : (
-              <div className="bg-amber-900/10 border border-amber-900/20 rounded-lg p-4 mb-6 flex items-start">
-                <AlertCircle className="h-5 w-5 text-amber-400 mr-3 mt-0.5 flex-shrink-0" />
+              <div className="bg-emerald-900/10 border border-emerald-900/20 rounded-lg p-4 mb-6 flex items-start">
+                <AlertCircle className="h-5 w-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
                 <p className="text-muted-foreground text-left">
                   Your profile is currently under review by our administrative
                   team. This process typically takes 1-2 business days.

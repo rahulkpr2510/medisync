@@ -168,7 +168,7 @@ export function DoctorEarnings({ earnings, payouts = [] }) {
               {pendingPayout ? (
                 <Badge
                   variant="outline"
-                  className="bg-amber-900/20 border-amber-900/30 text-amber-400"
+                  className="bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                 >
                   PROCESSING
                 </Badge>
@@ -290,7 +290,7 @@ export function DoctorEarnings({ earnings, payouts = [] }) {
                       className={
                         payout.status === "PROCESSED"
                           ? "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
-                          : "bg-amber-900/20 border-amber-900/30 text-amber-400"
+                          : "bg-emerald-900/20 border-emerald-900/30 text-emerald-400"
                       }
                     >
                       {payout.status}

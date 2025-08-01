@@ -77,28 +77,28 @@ export async function bookAppointment(formData) {
           {
             // New appointment starts during an existing appointment
             startTime: {
-              lte: startTime,
+              lte: startTime.toISOString(),
             },
             endTime: {
-              gt: startTime,
+              gt: startTime.toISOString(),
             },
           },
           {
             // New appointment ends during an existing appointment
             startTime: {
-              lt: endTime,
+              lt: endTime.toISOString(),
             },
             endTime: {
-              gte: endTime,
+              gte: endTime.toISOString(),
             },
           },
           {
             // New appointment completely overlaps an existing appointment
             startTime: {
-              gte: startTime,
+              gte: startTime.toISOString(),
             },
             endTime: {
-              lte: endTime,
+              lte: endTime.toISOString(),
             },
           },
         ],
@@ -127,8 +127,8 @@ export async function bookAppointment(formData) {
       data: {
         patientId: patient.id,
         doctorId: doctor.id,
-        startTime,
-        endTime,
+        startTime: startTime.toISOString(),
+        endTime: endTime.toISOString(),
         patientDescription,
         status: "SCHEDULED",
         videoSessionId: sessionId, // Store the Vonage session ID
@@ -206,7 +206,7 @@ export async function generateVideoToken(formData) {
 
     // Verify the appointment is within a valid time range (e.g., starting 5 minutes before scheduled time)
     const now = new Date();
-    const appointmentTime = new Date(appointment.startTime);
+    const appointmentTime = new Date(appointment.startTime.toISOString());
     const timeDifference = (appointmentTime - now) / (1000 * 60); // difference in minutes
 
     if (timeDifference > 30) {
@@ -217,7 +217,7 @@ export async function generateVideoToken(formData) {
 
     // Generate a token for the video session
     // Token expires 2 hours after the appointment start time
-    const appointmentEndTime = new Date(appointment.endTime);
+    const appointmentEndTime = new Date(appointment.endTime.toISOString());
     const expirationTime =
       Math.floor(appointmentEndTime.getTime() / 1000) + 60 * 60; // 1 hour after end time
 
@@ -334,8 +334,8 @@ export async function getAvailableTimeSlots(doctorId) {
       availableSlotsByDay[dayString] = [];
 
       // Create a copy of the availability start/end times for this day
-      const availabilityStart = new Date(availability.startTime);
-      const availabilityEnd = new Date(availability.endTime);
+      const availabilityStart = new Date(availability.startTime.toISOString());
+      const availabilityEnd = new Date(availability.endTime.toISOString());
 
       // Set the day to the current day we're processing
       availabilityStart.setFullYear(
@@ -365,8 +365,8 @@ export async function getAvailableTimeSlots(doctorId) {
         }
 
         const overlaps = existingAppointments.some((appointment) => {
-          const aStart = new Date(appointment.startTime);
-          const aEnd = new Date(appointment.endTime);
+          const aStart = new Date(appointment.startTime.toISOString());
+          const aEnd = new Date(appointment.endTime.toISOString());
 
           return (
             (current >= aStart && current < aEnd) ||

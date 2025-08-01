@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/page-header";
 export default async function DoctorspecialityPage({ params }) {
   const { speciality } = await params;
 
-  // Redirect to main doctors page if no speciality is provided
+  // redirect to main doctors page if no speciality is provided
   if (!speciality) {
     redirect("/doctors");
   }
@@ -21,7 +21,7 @@ export default async function DoctorspecialityPage({ params }) {
   return (
     <div className="space-y-5">
       <PageHeader
-        title={speciality.split("%20").join(" ")}
+        title={speciality.split("%20").join(" ").split("%26").join("&")}
         backLink="/doctors"
         backLabel="All Specialties"
       />

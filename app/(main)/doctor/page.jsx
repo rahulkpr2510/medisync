@@ -19,7 +19,7 @@ export default async function DoctorDashboardPage() {
       getDoctorPayouts(),
     ]);
 
-  //   // Redirect if not a doctor
+  //   // redirect if not a doctor
   if (user?.role !== "DOCTOR") {
     redirect("/onboarding");
   }

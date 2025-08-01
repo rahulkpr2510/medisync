@@ -10,7 +10,7 @@ export default async function OnboardingLayout({ children }) {
   // Get complete user profile
   const user = await getCurrentUser();
 
-  // Redirect users who have already completed onboarding
+  // redirect users who have already completed onboarding
   if (user) {
     if (user.role === "PATIENT") {
       redirect("/doctors");
