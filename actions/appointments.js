@@ -129,6 +129,10 @@ export async function bookAppointment(formData) {
         doctorId: doctor.id,
         startTime: startTime.toISOString(),
         endTime: endTime.toISOString(),
+<<<<<<< HEAD
+=======
+        endTime,
+>>>>>>> 125fe297aa8f51bfa0df75baa7d6a8c3acdefba5
         patientDescription,
         status: "SCHEDULED",
         videoSessionId: sessionId, // Store the Vonage session ID
