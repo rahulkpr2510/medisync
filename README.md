@@ -46,10 +46,15 @@ With a modern architecture powered by **Next.js 14**, server actions, and a Post
 ## <a name="features">🔋 Features</a>
 
 👉 **Secure Admin Authentication** – Powered by Clerk for safe and role-restricted access.
+
 👉 **Doctor Management** – View, verify, and manage registered doctors.
+
 👉 **Earnings Tracking** – Monitor income and payout history for each doctor.
+
 👉 **Payout Approval System** – Approve or reject pending payout requests with ease.
+
 👉 **Fraud Prevention** – Suspend payouts for flagged or suspicious accounts.
+
 👉 **Optimized Backend** – Built with server-side rendering and server actions for fast, scalable performance.
 
 ---
